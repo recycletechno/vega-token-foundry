@@ -13,9 +13,9 @@ import {Voting} from "../src/Voting.sol";
  */
 contract VotingSepoliaTest is Test {
     // Deployed contract addresses on Sepolia
-    address public tokenAddress = 0xe5e57acce878c6ed12420220323d483ce32c2101;
-    address public nftAddress = 0x91f3243b3e52a2d6f78ccd0ab6aab74db66774e7;
-    address public votingAddress = 0x05dd8fdb79398d399a5e444817792de09d92fc0c;
+    address public tokenAddress = 0xe5E57ACCE878c6Ed12420220323D483cE32c2101;
+    address public nftAddress = 0x91F3243B3E52A2d6f78ccD0Ab6AAb74Db66774e7;
+    address public votingAddress = 0x05dd8Fdb79398D399A5E444817792dE09D92Fc0c;
     
     // Contract interfaces
     VegaVote public token;
@@ -24,7 +24,7 @@ contract VotingSepoliaTest is Test {
     uint256 public tokenMultiplier; // Multiplier based on token decimals
 
     // Test addresses
-    address owner = 0xb5f848c40484081352e45f3e034b927d11df9047; // Actual deployer from the JSON
+    address owner = 0xb5F848c40484081352E45f3e034b927d11dF9047; // Actual deployer from the JSON
     address satoshi = address(0xB);
     address vitalik = address(0xC);
     address donald = address(0xD);
