@@ -1,6 +1,6 @@
-# Vega Vote - Deployment Information
+# Vega Vote - Deployment Information with mock VegaVote contract
 
-## Deployed Contracts
+## Deployed Contracts 
 
 ### VegaVote (ERC20 Token)
 - **Contract Address**: `0xe5e57acce878c6ed12420220323d483ce32c2101`
@@ -38,3 +38,43 @@
 ```shell
 $ forge script script/Deploy.s.sol:Deploy --rpc-url $SEPOLIA_RPC_URL --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
 ```
+
+# Vega Vote - Deployment Information with hardcoded VegaVote contract
+
+## Deployed Contracts 
+
+### VegaVote (ERC20 Token)
+- **Contract Address**: `0xD3835FE9807DAecc7dEBC53795E7170844684CeF`
+- **Network**: Sepolia Testnet (Chain ID: 11155111)
+- **Explorer Link**: [View on Sepolia Etherscan](https://sepolia.etherscan.io/address/0xD3835FE9807DAecc7dEBC53795E7170844684CeF)
+
+### VotingResultNFT (ERC721 Token)
+- **Contract Address**: `0x7341785ac428881db4401958241b4fe59b879e03`
+- **Transaction Hash**: `0xae94a0248bc4968cb4a79cf3f7b70e06d9602e609b6db2d09a2a6abec1821eba`
+- **Network**: Sepolia Testnet (Chain ID: 11155111)
+- **Explorer Link**: [View on Sepolia Etherscan](https://sepolia.etherscan.io/address/0x7341785ac428881db4401958241b4fe59b879e03)
+- **Transaction Link**: [View Transaction](https://sepolia.etherscan.io/tx/0xae94a0248bc4968cb4a79cf3f7b70e06d9602e609b6db2d09a2a6abec1821eba)
+
+### Voting (Main Contract)
+- **Contract Address**: `0x2cd603d4f9cc3447e2eee10897b74fd01f4a64b9`
+- **Transaction Hash**: `0xedb0692c83c4ebc1538bd22c6f9ec68528faafc74a4008b43a36f400bb24224f`
+- **Network**: Sepolia Testnet (Chain ID: 11155111)
+- **Explorer Link**: [View on Sepolia Etherscan](https://sepolia.etherscan.io/address/0x2cd603d4f9cc3447e2eee10897b74fd01f4a64b9)
+- **Transaction Link**: [View Transaction](https://sepolia.etherscan.io/tx/0xedb0692c83c4ebc1538bd22c6f9ec68528faafc74a4008b43a36f400bb24224f)
+- **Constructor Arguments**:
+  - VegaVote Token: `0xD3835FE9807DAecc7dEBC53795E7170844684CeF`
+  - VotingResultNFT: `0x7341785ac428881db4401958241b4fe59b879e03`
+
+## Ownership Transfer
+- The ownership of VotingResultNFT was transferred to the Voting contract
+- **Transaction Hash**: `0xc5d77dd5aa94eaeee3b7c9253503117ec987f30088a97f1e65e14c42443eb2fa`
+- **Transaction Link**: [View Transaction](https://sepolia.etherscan.io/tx/0xc5d77dd5aa94eaeee3b7c9253503117ec987f30088a97f1e65e14c42443eb2fa)
+
+## Development
+
+### Deploy
+
+```shell
+$ forge script script/DeployWithExternalToken.s.sol:DeployWithExternalToken --rpc-url $SEPOLIA_RPC_URL --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
+```
+
